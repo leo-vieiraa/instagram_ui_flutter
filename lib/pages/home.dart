@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_ui_flutter/util/bubble_stories.dart';
+import 'package:instagram_ui_flutter/util/user_posts.dart';
 
 class UserHome extends StatelessWidget {
   const UserHome({super.key});
@@ -51,8 +52,17 @@ class UserHome extends StatelessWidget {
                   return BubbleStories(text: _userList[index]);
                 },
               ),
-            )
+            ),
             // Body
+            Expanded(
+              child: ListView.builder(
+                scrollDirection: Axis.vertical,
+                itemCount: _userList.length,
+                itemBuilder: (context, index) {
+                  return UserPosts(name: _userList[index]);
+                },
+              ),
+            )
           ],
         ));
   }
