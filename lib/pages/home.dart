@@ -34,7 +34,7 @@ class UserHome extends StatelessWidget {
                     padding: const EdgeInsets.all(24.0),
                     child: Icon(Icons.favorite),
                   ),
-                  Icon(Icons.share),
+                  Icon(Icons.chat_bubble_outline),
                 ],
               )
             ],
